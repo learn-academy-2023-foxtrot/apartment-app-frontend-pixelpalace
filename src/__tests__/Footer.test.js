@@ -11,9 +11,6 @@ describe("<Footer />", () => {
       </BrowserRouter>
     )
 
-    screen.debug() 
-    screen.logTestingPlaygroundURL() 
-
     const copyRight = screen.getByText(/2023 Shaun, Aleja/i)
 
     expect(copyRight).toBeInTheDocument()

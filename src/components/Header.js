@@ -6,8 +6,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 function Header(props) {
   const [collapsed, setCollapsed] = useState(true);
@@ -18,16 +18,17 @@ function Header(props) {
     <div>
       <Navbar color="info" light>
         <NavbarBrand href="/" className="me-auto">
+            <img src="castle__1__480.png" alt="PixelPalace Logo" width="50" height="50" />
           PixelPalace 
         </NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="me-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/components/ApartmentIndex/">See Your Apartments</NavLink>
+              <NavLink to={`/apartments/`}>See Our Apartments</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
+              <NavLink>
                 Sign In
               </NavLink>
             </NavItem>
