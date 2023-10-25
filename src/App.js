@@ -15,17 +15,17 @@ import ApartmentProtectedIndex from "./pages/ApartmentProtectedIndex"
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(mockUsers[0])
-  const [Apartments, setApartments] = useState(mockApartments)
+  const [apartments, setApartments] = useState(mockApartments)
 
   return (
     <>
     <Header/>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/Apartments" element={<ApartmentIndex />} />
-      <Route path="/ApartmentsShow" element={<ApartmentShow />} />
-      <Route path="/ApartmentsNew" element={<ApartmentNew />} />
-      <Route path="/ApartmentsEdit" element={<ApartmentEdit />} />
+      <Route path="/apartments" element={<ApartmentIndex />} />
+      <Route path="/apartmentsshow" element={<ApartmentShow />} />
+      <Route path="/apartmentsnew" element={<ApartmentNew />} />
+      <Route path="/apartmentsedit" element={<ApartmentEdit />} />
       <Route path="/myapartments" element={<ApartmentProtectedIndex />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

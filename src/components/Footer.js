@@ -1,11 +1,14 @@
 import React from "react"
+import { Navbar } from "reactstrap"
 
 const Footer = () => {
-return (
-<>
-<h2>Footer component</h2>
-</>
-)
+    return (
+    <>
+        <Navbar fixed="bottom" color="info">
+            <p> &copy; 2023 Shaun, Aleja, Tori & Xe aka PixelPalace Programmers</p>
+        </Navbar>
+    </>
+    )
 }
 
 export default Footer
