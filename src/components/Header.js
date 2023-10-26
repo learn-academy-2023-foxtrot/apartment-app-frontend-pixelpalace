@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import logo from '../assets/logo.jpg'
+
 import {
   Collapse,
   Navbar,
@@ -18,7 +20,7 @@ function Header(props) {
     <div>
       <Navbar color="info" light>
         <NavbarBrand href="/" className="me-auto">
-            <img src="castle__1__480.png" alt="PixelPalace Logo" width="50" height="50" />
+            <img src={logo} alt="PixelPalace" width="50" height="50" />
           PixelPalace 
         </NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="me-2" />

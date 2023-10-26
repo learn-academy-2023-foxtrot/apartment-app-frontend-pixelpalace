@@ -12,6 +12,8 @@ import mockApartments from "./mockApartments.js"
 import mockUsers from "./mockUsers.js"
 import './App.css';
 import ApartmentProtectedIndex from "./pages/ApartmentProtectedIndex"
+import background from './assets/back.jpg'
+
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(mockUsers[0])
