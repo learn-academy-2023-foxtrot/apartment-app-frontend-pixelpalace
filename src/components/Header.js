@@ -11,7 +11,7 @@ import {
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-function Header(props) {
+function Header({signup}) {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => setCollapsed(!collapsed);
@@ -32,6 +32,11 @@ function Header(props) {
             <NavItem>
               <NavLink>
                 Sign In
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink signUp={signup} to={`/signup`}>
+                Sign Up
               </NavLink>
             </NavItem>
           </Nav>
