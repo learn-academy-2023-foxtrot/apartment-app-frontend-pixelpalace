@@ -1,8 +1,19 @@
-// import { render, screen } from '@testing-library/react';
-// import App from './App';
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom'; // Import BrowserRouter
+import App from './App';
 
-// test('renders page', () => {
-//   render(<App />);
-//   const linkElement = screen.getByRole({ name: 'Header' });
-//   expect(linkElement).toBeInTheDocument();
-// });
+describe ("<App />", () => {
+    it("renders the welcome page", () => {
+        render(
+          <BrowserRouter> 
+            <App />
+          </BrowserRouter>
+        );
+        const welcome = screen.getByRole("link", {
+            name: /apartments/i
+        });
+        expect(welcome).toBeInTheDocument();
+
+    })
+});
+

@@ -57,3 +57,16 @@
   padding: 150px;
   color: blue;
 }
+
+.not-found{
+  background-image: url('./assets/notFound.jpeg');
+  text-align: center;
+  min-height: 100vh;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.not-found-text{
+  text-align: center;
+}

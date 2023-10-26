@@ -10,6 +10,9 @@ test('renders welcome message', () => {
 
 test('renders welcome image', () => {
   render(<Home />);
-  const welcomeImage = screen.getByAltText('logo');
+
+  const welcomeImage = screen.getByRole('heading', {
+    name: /welcome to pixiel palace/i
+  })
   expect(welcomeImage).toBeInTheDocument();
 });
