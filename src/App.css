@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.Home {
+  background-image: url('./assets/back.jpg');
+  text-align: center;
+  min-height: 100vh;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* image-rendering:'../assets/logo.png'; */
+}
+
+.header{
+  /* flex-direction: column; */
+  /* height: auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto; */
+  padding: 150px;
+  color: blue;
+}
