@@ -11,13 +11,13 @@ import {
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-function Header({signup}) {
+const Header = ({signup, currentUser, logout}) => {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <div>
+    <>
       <Navbar color="info" light>
         <NavbarBrand href="/" className="me-auto">
             <img src={logo} alt="PixelPalace" width="50" height="50" />
@@ -27,22 +27,30 @@ function Header({signup}) {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink to={`/apartments/`}>See Our Apartments</NavLink>
+              <NavLink to={`/apartmentindex/`}>See Our Apartments</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink>
-                Sign In
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink signUp={signup} to={`/signup`}>
-                Sign Up
-              </NavLink>
-            </NavItem>
+            {!currentUser && (
+              <>
+                <NavItem>
+                    <input type='button' value="Log in" />
+                </NavItem>
+                <NavItem>
+                  <NavLink signUp={signup} to={`/signup`}>Sign Up</NavLink>
+                </NavItem>
+              </>
+            )}
+            {currentUser && (
+              <>
+                <NavItem>
+                  <input type="button" value='Log out' onClick={logout} />
+                </NavItem>
+              </>
+            )}
+            
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    </>
   );
 }
 
