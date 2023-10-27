@@ -9,13 +9,17 @@ import {
   Nav,
   NavItem,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Header = ({signup, currentUser, logout}) => {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => setCollapsed(!collapsed);
 
+  const navigate = useNavigate()
+  const handleLoginClick = () => {
+    navigate("/login")
+  }
   return (
     <>
       <Navbar color="info" light>
@@ -32,7 +36,7 @@ const Header = ({signup, currentUser, logout}) => {
             {!currentUser && (
               <>
                 <NavItem>
-                    <input type='button' value="Log in" />
+                    <input type='button' value="Log in" onClick={handleLoginClick}/>
                 </NavItem>
                 <NavItem>
                   <NavLink signUp={signup} to={`/signup`}>Sign Up</NavLink>

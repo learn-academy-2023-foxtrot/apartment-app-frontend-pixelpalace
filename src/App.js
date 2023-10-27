@@ -104,12 +104,13 @@ const App = () => {
 
   return (
     <>
-    <Header currentUser={currentUser} signup={signup} logout={logout}/>
+    <Header currentUser={currentUser} signup={signup} login={login} logout={logout}/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/signup" element={<SignUp signup={signup} />}/>
       <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments} />} />
       <Route path="/apartmentsshow/:id" element={<ApartmentShow apartments={apartments} />} />
+      <Route path="/login" element={<LogIn login={login} />} />
       { currentUser && (
         <Route 
           path="/myapartments" 
