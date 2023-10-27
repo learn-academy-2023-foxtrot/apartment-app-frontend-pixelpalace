@@ -7,7 +7,7 @@ const Home = () => {
 return (
 <>
 <div className='Home'>
-<h2 className="header">Welcome to Pixiel Palace</h2>
+<h2 className="header">Welcome to Pixel Palace</h2>
 
 
 </div>
