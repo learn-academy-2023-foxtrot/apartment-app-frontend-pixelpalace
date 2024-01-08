@@ -22,7 +22,7 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState(null)
   const [apartments, setApartments] = useState([])
 
-  const url = "http://localhost:3000"
+  const url = "apartment-app-backend.onrender.com"
 
   const readApartments = () => {
     fetch(`${url}/apartments`)
